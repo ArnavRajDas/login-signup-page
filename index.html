@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & sign up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrapper" id="formWrapper">
+        <!-- Login form -->
+         <div class="form-container login">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email, usearname..." required />
+                <input type="password" placeholder="Password" required />
+                <div class="forgot-password" tabindex="0">Forgot password?</div>
+                <button type="submit" class="submit-btn">Login</button>
+
+                <!-- Social login button -->
+                 <div class="social-login">
+                    <div class="social-btn google" title="Sign in with Google"></div>
+                    <div class="social-btn facebook" title="Sign in with Facebook"></div>
+                    <div class="social-btn github" title="Sign in with Github"></div>
+                    <div class="social-btn x" title="Sign in with X(Twitter)"></div>
+                 </div>
+            </form>
+         </div>
+
+         <!-- signin form -->
+          <div class="form-container signin">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="usearname" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <input type="password" placeholder="Confirmed Password" required>
+                <label class="accept-terms">
+                    <input type="checkbox" required />I accept the terms & conditions
+                </label>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- Right side toggle -->
+           <div class="toggle-container">
+            <h2 id="toggleHeading">Don't have an account???</h2>
+            <p id="toggleText">Sign Up to get started</p>
+            <button class="switch-btn" id="toggleBtn">Sign Up</button>
+           </div>
+    </div>
+
+
+    
+
+
+    <script>
+  const wrapper = document.getElementById('formWrapper');
+  const toggleBtn = document.getElementById('toggleBtn');
+  const toggleHeading = document.getElementById('toggleHeading');
+  const toggleText = document.getElementById('toggleText');
+
+  toggleBtn.addEventListener('click', () => {
+    wrapper.classList.toggle('active');
+
+    if(wrapper.classList.contains('active')){
+      toggleHeading.textContent = "Already have an account?";
+      toggleText.textContent = "Login to your account!";
+      toggleBtn.textContent = "Login";
+    } else {
+      toggleHeading.textContent = "Don't have an account?";
+      toggleText.textContent = "Sign up to get started!";
+      toggleBtn.textContent = "Sign Up";
+    }
+  });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #16b3d6, #363c38);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  max-width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.form-container {
+  width: 50%;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border 0.3s ease;
+}
+
+.form-container input:focus {
+  border: 2px solid #3ece42;
+  outline: none;
+}
+
+.form-container button.submit-btn {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(to right, #2eb4ee, #41443e);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.toggle-container {
+  width: 50%;
+  background: linear-gradient(to bottom right, #15aaea, #2d2d2b);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.toggle-container button.switch-btn {
+  padding: 8px 25px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container.signin {
+  display: none;
+}
+
+.wrapper.active .form-container.login {
+  display: none;
+}
+.wrapper.active .form-container.signin {
+  display: block;
+}
+
+.forgot-password {
+  color: #764ba2;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.accept-terms {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
